@@ -1,0 +1,155 @@
+digraph myGraph{
+node35925 [label="FunctionDef: safe_copy (char * buf , size_t buflen , const char * msg)"]
+node35926 [label="ParameterList: char * buf , size_t buflen , const char * msg"]
+node35927 [label="Parameter: const char * msg"]
+node35928 [label="Identifier: msg"]
+node35929 [label="ParameterType: const char *"]
+node35930 [label="Parameter: size_t buflen"]
+node35931 [label="Identifier: buflen"]
+node35932 [label="ParameterType: size_t"]
+node35933 [label="Parameter: char * buf"]
+node35934 [label="Identifier: buf"]
+node35935 [label="ParameterType: char *"]
+node35936 [label="CompoundStatement: int ret ;"]
+node35937 [label="ReturnStatement: return ret ;"]
+node35938 [label="Identifier: ret"]
+node35939 [label="IfStatement: if ( len < buflen )"]
+node35940 [label="ElseStatement: else"]
+node35941 [label="CompoundStatement: {"]
+node35942 [label="ExpressionStatement: ret = ERANGE"]
+node35943 [label="AssignmentExpr: ret = ERANGE"]
+node35944 [label="Identifier: ERANGE"]
+node35945 [label="Identifier: ret"]
+node35946 [label="ExpressionStatement: buf [ buflen - 1 ] = '\\0'"]
+node35947 [label="AssignmentExpr: buf [ buflen - 1 ] = '\\0'"]
+node35948 [label="PrimaryExpression: '\\0'"]
+node35949 [label="ArrayIndexing: buf [ buflen - 1 ]"]
+node35950 [label="AdditiveExpression: buflen - 1"]
+node35951 [label="PrimaryExpression: 1"]
+node35952 [label="Identifier: buflen"]
+node35953 [label="Identifier: buf"]
+node35954 [label="ExpressionStatement: memcpy ( buf , msg , buflen - 1 )"]
+node35955 [label="CallExpression: memcpy ( buf , msg , buflen - 1 )"]
+node35956 [label="ArgumentList: buf"]
+node35957 [label="Argument: buflen - 1"]
+node35958 [label="AdditiveExpression: buflen - 1"]
+node35959 [label="PrimaryExpression: 1"]
+node35960 [label="Identifier: buflen"]
+node35961 [label="Argument: msg"]
+node35962 [label="Identifier: msg"]
+node35963 [label="Argument: buf"]
+node35964 [label="Identifier: buf"]
+node35965 [label="Identifier: memcpy"]
+node35966 [label="CompoundStatement: {"]
+node35967 [label="ExpressionStatement: ret = 0"]
+node35968 [label="AssignmentExpr: ret = 0"]
+node35969 [label="PrimaryExpression: 0"]
+node35970 [label="Identifier: ret"]
+node35971 [label="ExpressionStatement: memcpy ( buf , msg , len + 1 )"]
+node35972 [label="CallExpression: memcpy ( buf , msg , len + 1 )"]
+node35973 [label="ArgumentList: buf"]
+node35974 [label="Argument: len + 1"]
+node35975 [label="AdditiveExpression: len + 1"]
+node35976 [label="PrimaryExpression: 1"]
+node35977 [label="Identifier: len"]
+node35978 [label="Argument: msg"]
+node35979 [label="Identifier: msg"]
+node35980 [label="Argument: buf"]
+node35981 [label="Identifier: buf"]
+node35982 [label="Identifier: memcpy"]
+node35983 [label="Condition: len < buflen"]
+node35984 [label="RelationalExpression: len < buflen"]
+node35985 [label="Identifier: buflen"]
+node35986 [label="Identifier: len"]
+node35987 [label="IdentifierDeclStatement: int ret ;"]
+node35988 [label="IdentifierDecl: ret"]
+node35989 [label="Identifier: ret"]
+node35990 [label="IdentifierDeclType: int"]
+node35991 [label="IdentifierDeclStatement: size_t len = strlen ( msg ) ;"]
+node35992 [label="IdentifierDecl: len = strlen ( msg )"]
+node35993 [label="AssignmentExpr: len = strlen ( msg )"]
+node35994 [label="CallExpression: strlen ( msg )"]
+node35995 [label="ArgumentList: msg"]
+node35996 [label="Argument: msg"]
+node35997 [label="Identifier: msg"]
+node35998 [label="Identifier: strlen"]
+node35999 [label="Identifier: len"]
+node36000 [label="Identifier: len"]
+node36001 [label="IdentifierDeclType: size_t"]
+"node35925":s->"node35936":n;
+"node35925":s->"node35926":n;
+"node35926":s->"node35933":n;
+"node35926":s->"node35930":n;
+"node35926":s->"node35927":n;
+"node35927":s->"node35929":n;
+"node35927":s->"node35928":n;
+"node35930":s->"node35932":n;
+"node35930":s->"node35931":n;
+"node35933":s->"node35935":n;
+"node35933":s->"node35934":n;
+"node35936":s->"node35991":n;
+"node35936":s->"node35987":n;
+"node35936":s->"node35939":n;
+"node35936":s->"node35937":n;
+"node35937":s->"node35938":n;
+"node35939":s->"node35983":n;
+"node35939":s->"node35966":n;
+"node35939":s->"node35940":n;
+"node35940":s->"node35941":n;
+"node35941":s->"node35954":n;
+"node35941":s->"node35946":n;
+"node35941":s->"node35942":n;
+"node35942":s->"node35943":n;
+"node35943":s->"node35945":n;
+"node35943":s->"node35944":n;
+"node35946":s->"node35947":n;
+"node35947":s->"node35949":n;
+"node35947":s->"node35948":n;
+"node35949":s->"node35953":n;
+"node35949":s->"node35950":n;
+"node35950":s->"node35952":n;
+"node35950":s->"node35951":n;
+"node35954":s->"node35955":n;
+"node35955":s->"node35965":n;
+"node35955":s->"node35956":n;
+"node35956":s->"node35963":n;
+"node35956":s->"node35961":n;
+"node35956":s->"node35957":n;
+"node35957":s->"node35958":n;
+"node35958":s->"node35960":n;
+"node35958":s->"node35959":n;
+"node35961":s->"node35962":n;
+"node35963":s->"node35964":n;
+"node35966":s->"node35971":n;
+"node35966":s->"node35967":n;
+"node35967":s->"node35968":n;
+"node35968":s->"node35970":n;
+"node35968":s->"node35969":n;
+"node35971":s->"node35972":n;
+"node35972":s->"node35982":n;
+"node35972":s->"node35973":n;
+"node35973":s->"node35980":n;
+"node35973":s->"node35978":n;
+"node35973":s->"node35974":n;
+"node35974":s->"node35975":n;
+"node35975":s->"node35977":n;
+"node35975":s->"node35976":n;
+"node35978":s->"node35979":n;
+"node35980":s->"node35981":n;
+"node35983":s->"node35984":n;
+"node35984":s->"node35986":n;
+"node35984":s->"node35985":n;
+"node35987":s->"node35988":n;
+"node35988":s->"node35990":n;
+"node35988":s->"node35989":n;
+"node35991":s->"node35992":n;
+"node35992":s->"node36001":n;
+"node35992":s->"node36000":n;
+"node35992":s->"node35993":n;
+"node35993":s->"node35999":n;
+"node35993":s->"node35994":n;
+"node35994":s->"node35998":n;
+"node35994":s->"node35995":n;
+"node35995":s->"node35996":n;
+"node35996":s->"node35997":n;
+}
